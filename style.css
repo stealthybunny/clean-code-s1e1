@@ -137,18 +137,18 @@
 
 /* Completed */
 .tasks-completed .list__item_label {
-  text-decoration: line-through
+  text-decoration: line-through;
   color: #888;
 }
 
 /* Edit Task */
 .list__item .tasks-operations__input {
-  display:none
+  display:none;
 }
 
 .editMode .tasks-operations__input {
   display:inline-block;
-  width:224px
+  width:224px;
 }
 
 .editMode .list__item_label {
