@@ -1,5 +1,5 @@
 /* Basic Style */
-body {
+.body {
   background-color: #f8f8f8;
   color: #333;
   font-family: Lato, sans-serif;
@@ -23,22 +23,27 @@ body {
   .header { text-align: center;
 }
 }
-.task {
+.tasks-operations__input {
   width: 56%;
   display: inline-block;
-  flex-grow: 1
+  width: 318px;
 }
 .tasks-operations__row {
   display: flex;
 }
-ul {
+.tasks-operations__input_add {
+  flex-grow: 1;
+}
+.list {
   margin:0;
   padding: 0px;
 }
-input,button{
+.button, 
+.tasks-operations__input {
   outline:none;
 }
-button {
+
+.button {
   background: none;
   border: 0px;
   color: #888;
@@ -47,7 +52,7 @@ button {
   font-family: Lato, sans-serif;
   cursor: pointer;
 }
-button:hover {
+.button:hover {
   color: #3a3a3a;
 }
 /* Heading */
@@ -61,7 +66,7 @@ button:hover {
   text-transform: uppercase;
   list-style:none;
 }
-input[type="text"] {
+.tasks-operations__input {
   margin: 0;
   font-size: 18px;
   line-height: 18px;
@@ -73,7 +78,8 @@ input[type="text"] {
   font-family: Lato, sans-serif;
   color: #888;
 }
-input[type="text"]:focus {
+
+.tasks-operations__input:focus {
   color: #333;
 }
 
@@ -82,61 +88,50 @@ input[type="text"]:focus {
   display: block;
   margin: 0 0 20px;
 }
-input#new-task {
-  width: 318px;
-}
+
 
 /* Task list */
-li {
+.list__item {
   overflow: hidden;
   padding: 20px 0;
   border-bottom: 1px solid #eee;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-li > * {
-  vertical-align: middle;
-}
-
-li > input[type="checkbox"] {
+.tasks-operations__checkbox {
   margin: 0 10px;
 }
-li > label {
+.list__item_label {
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
   width: 226px;
 }
-li >    input[type="text"] {
-  width: 226px
-}
-button.delete img {
+.button__pic_delete {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
-button.delete img:hover {
+.button__pic_delete:hover {
   transform: rotateZ(0);
 }
 
 /* Completed */
-ul#completed-tasks label {
+.tasks-completed .list__item_label {
   text-decoration: line-through
   color: #888;
 }
 
 /* Edit Task */
-ul li input[type="text"] {
+.list__item .tasks-operations__input {
   display:none
 }
-
-ul li.editMode input[type="text"] {
+.editMode .tasks-operations__input {
   display:inline-block;
   width:224px
 }
 
-ul li.editMode label {
+.editMode .list__item_label {
   display:none;
 }
